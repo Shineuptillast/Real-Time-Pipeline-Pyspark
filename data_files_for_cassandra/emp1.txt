@@ -1,0 +1,7 @@
+INSERT INTO {}.{} (EMP_ID,EMP_NAME,CITY,STATE) VALUES (4,'Stephen','Mumbai','Maharashtra');
+INSERT INTO {}.{} (EMP_ID,EMP_NAME,CITY,STATE) VALUES (5,'Berry','Chennai','Tamilnadu');
+INSERT INTO {}.{} (EMP_ID,EMP_NAME,CITY,STATE) VALUES (6,'Barton','Pune','Maharashtra');
+INSERT INTO {}.{} (EMP_ID,EMP_NAME,CITY,STATE) VALUES (7,'Natasha','Hyderabad','Andra Pradesh');
+INSERT INTO {}.{} (EMP_ID,EMP_NAME,CITY,STATE) VALUES (8,'Sundar','Noida','Uttar Pradesh');
+INSERT INTO {}.{} (EMP_ID,EMP_NAME,CITY,STATE) VALUES (9,'Shashank','Delhi','Delhi');
+INSERT INTO {}.{} (EMP_ID,EMP_NAME,CITY,STATE) VALUES (10,'Sudhanshu','New Mumbai' ,'Maharashtra');

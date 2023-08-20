@@ -1,0 +1,9 @@
+Producer run command --
+spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1,com.datastax.spark:spark-cassandra-connector_2.12:3.0.0 --files file:///project/producer_code/secure-connect-cassandra-project-1.zip producer.py
+
+Consumer Run command
+spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1,com.datastax.spark:spark-cassandra-connector_2.12:3.0.0 --files file:///project/producer_code/secure-connect-cassandra-project-1.zip consumer.py
+
+
+
+( df_emp.write.format('kafka').option('kafka.bootstrap.servers',os.getenv('BOOTSTRAP_SERVER')).option('kafka.security.protocol',os.getenv('SECURITY_PROTOCOL')).option("kafka.sasl.jaas.config","org.apache.kafka.common.security.plain.PlainLoginModule  required username='{}' password='{}';".format(os.getenv('API_KEY'),os.getenv('API_SECRET_KEY'))).option('kafka.ssl.endpoint.identification.algorithm',os.getenv('ALGORITHM')).option('kafka.sasl.mechanism',os.getenv('SSL_MECHANISM')).option("checkpointLocation", os.path.join("kafka_checkpoint")).option("topic",topic_name).save() )
